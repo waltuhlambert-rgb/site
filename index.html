@@ -15,7 +15,7 @@
     body {
       background-color: #121212;
       color: #f0f0f0;
-      padding-top: 100px; /* space for fixed header */
+      padding-top: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,7 +23,6 @@
       flex-direction: column;
     }
 
-    /* Fixed Top Banner */
     header {
       position: fixed;
       top: 0;
@@ -42,7 +41,6 @@
       width: auto;
     }
 
-    /* Place Order Button */
     .order-button {
       background-color: #007bff;
       color: white;
@@ -61,20 +59,19 @@
 </head>
 <body>
 
-  <!-- Header / Logo -->
+  <!-- Header -->
   <header>
     <img src="logo1.png" alt="Shop Logo" />
   </header>
 
-  <!-- Single Order Button -->
-  <button class="order-button">Place order</button>
+  <!-- Place Order Button -->
+  <button class="order-button" onclick="openGoogleForm()">Place order</button>
 
-  <!-- Optional JavaScript -->
   <script>
-    document.querySelector('.order-button').addEventListener('click', () => {
-      console.log("Place order button clicked.");
-      // You can add further functionality here (e.g., redirect or popup)
-    });
+    function openGoogleForm() {
+      const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSe8ga30-Spn-pfx1sshNCIPzgt9v3KpSgN1nsxlPAD5Bbi2dg/viewform?usp=header"; // Replace with your actual form link
+      window.open(formURL, "_blank");
+    }
   </script>
 </body>
 </html>
