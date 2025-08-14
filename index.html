@@ -15,114 +15,65 @@
     body {
       background-color: #121212;
       color: #f0f0f0;
-      padding-top: 100px; /* for fixed header */
+      padding-top: 100px; /* space for fixed header */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
     }
 
-    /* Top Banner */
+    /* Fixed Top Banner */
     header {
       position: fixed;
       top: 0;
       width: 100%;
       height: 100px;
-      background-color: #ffffff; /* Changed to white */
+      background-color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Softer shadow for light header */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
     header img {
       height: 80px;
       width: auto;
-      /* Optional: background for white logos */
-      /* background-color: #00000010;
-      border-radius: 8px; */
     }
 
-    /* Shop Container */
-    .shop-container {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 40px;
-      flex-wrap: wrap;
-    }
-
-    /* Product Card */
-    .product-card {
-      background-color: #1e1e1e;
-      border-radius: 10px;
-      width: 250px;
-      padding: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-      text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .product-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
-    }
-
-    .product-card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    .product-name {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #ffffff;
-    }
-
-    .view-button {
+    /* Place Order Button */
+    .order-button {
       background-color: #007bff;
       color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
       transition: background-color 0.3s;
     }
 
-    .view-button:hover {
+    .order-button:hover {
       background-color: #0056b3;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header / Banner -->
+  <!-- Header / Logo -->
   <header>
     <img src="logo1.png" alt="Shop Logo" />
   </header>
 
-  <!-- Shop Items -->
-  <div class="shop-container">
-    <!-- Product 1 -->
-    <div class="product-card">
-      <img src="blank1.png" alt="Blank1 Image" />
-      <div class="product-name">Blank1</div>
-      <a href="blank1view.html" class="view-button">View Now</a>
-    </div>
-
-    <!-- Product 2 -->
-    <div class="product-card">
-      <img src="blank2.png" alt="Blank2 Image" />
-      <div class="product-name">Blank2</div>
-      <a href="blank2view.html" class="view-button">View Now</a>
-    </div>
-  </div>
+  <!-- Single Order Button -->
+  <button class="order-button">Place order</button>
 
   <!-- Optional JavaScript -->
   <script>
-    document.querySelectorAll('.view-button').forEach(button => {
-      button.addEventListener('click', () => {
-        console.log("Button clicked:", button.textContent);
-      });
+    document.querySelector('.order-button').addEventListener('click', () => {
+      console.log("Place order button clicked.");
+      // You can add further functionality here (e.g., redirect or popup)
     });
   </script>
 </body>
