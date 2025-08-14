@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABQ Stationary Shop</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      padding-top: 100px; /* for fixed header */
+    }
+
+    /* Top Banner */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    header img {
+      height: 80px;
+      width: auto;
+    }
+
+    /* Shop Container */
+    .shop-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    /* Product Card */
+    .product-card {
+      background-color: #fff;
+      border-radius: 10px;
+      width: 250px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .view-button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .view-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Banner -->
+  <header>
+    <img src="logo1.jpg" alt="Shop Logo" />
+  </header>
+
+  <!-- Shop Items -->
+  <div class="shop-container">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="blank1.jpg" alt="Blank1 Image" />
+      <div class="product-name">Blank1</div>
+      <a href="blank1view.html" class="view-button">View Now</a>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="blank2.jpg" alt="Blank2 Image" />
+      <div class="product-name">Blank2</div>
+      <a href="blank2view.html" class="view-button">View Now</a>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript (you can expand this later) -->
+  <script>
+    // Example: log when buttons are clicked
+    document.querySelectorAll('.view-button').forEach(button => {
+      button.addEventListener('click', () => {
+        console.log("Button clicked:", button.textContent);
+      });
+    });
+  </script>
+</body>
+</html>
